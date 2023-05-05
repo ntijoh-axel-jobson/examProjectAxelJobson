@@ -1,10 +1,9 @@
-fetch('https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1.json')
-    .then(res => {
-        if (res.ok) {
-            console.log("SUCCESS")
-        } else {
-            console.log("FAILURE")
-        }
-    })
-    .then(data => {console.log(data)})
-    .catch(error => console.log("ERROR"))
+fetch('https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station/53430/period/latest-months/data.json')
+  .then(response => response.json())
+  .then(data => {
+    const temperature = data.value[0].value;
+    const temperatureElement = document.createElement('p');
+    temperatureElement.textContent = `The temperature is ${temperature}°C.`;
+    document.body.appendChild(temperatureElement);
+  })
+  .catch(error => console.error(error));
