@@ -560,11 +560,12 @@ function hmrAccept(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _auto = require("chart.js/auto");
 var _autoDefault = parcelHelpers.interopDefault(_auto);
-fetch("https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station/97400/period/latest-months/data.json").then((response)=>response.json()).then((data)=>{
+fetch("https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station/72420/period/latest-months/data.json").then((response)=>response.json()).then((data)=>{
     const temperatures = data.value.map((entry)=>entry.value);
     const dates = data.value.map((entry)=>new Date(entry.date));
     //72420 GÖTEBORG LANDVETTER
     //97400 ARLANDA FLYGPLATS
+    console.log("t");
     new (0, _autoDefault.default)(document.getElementById("acquisitions"), {
         type: "line",
         data: {

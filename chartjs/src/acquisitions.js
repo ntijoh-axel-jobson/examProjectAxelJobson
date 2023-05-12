@@ -1,6 +1,6 @@
 import Chart from 'chart.js/auto'
 
-  fetch('https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station/97400/period/latest-months/data.json')
+  fetch('https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station/72420/period/latest-months/data.json')
   .then(response => response.json())
   .then(data => {
     const temperatures = data.value.map(entry => entry.value);
@@ -8,6 +8,7 @@ import Chart from 'chart.js/auto'
 
     //72420 GÖTEBORG LANDVETTER
     //97400 ARLANDA FLYGPLATS
+    console.log("t")
 
     new Chart(
         document.getElementById('acquisitions'),
