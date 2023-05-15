@@ -8,7 +8,6 @@ import Chart from 'chart.js/auto'
 
     //72420 GÖTEBORG LANDVETTER
     //97400 ARLANDA FLYGPLATS
-    console.log("t")
 
     new Chart(
         document.getElementById('acquisitions'),

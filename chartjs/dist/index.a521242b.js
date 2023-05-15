@@ -565,7 +565,6 @@ fetch("https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/s
     const dates = data.value.map((entry)=>new Date(entry.date));
     //72420 GÖTEBORG LANDVETTER
     //97400 ARLANDA FLYGPLATS
-    console.log("t");
     new (0, _autoDefault.default)(document.getElementById("acquisitions"), {
         type: "line",
         data: {
